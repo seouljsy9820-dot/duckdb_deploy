@@ -49,4 +49,16 @@ try:
 except Exception as e:
     st.error("DB 접근 중 오류 발생")
     st.error(str(e))
+    # === Customer 테이블 내용 화면에 보여주기 ===
+st.subheader("📘 Customer 테이블 내용")
+rows = con.execute("SELECT * FROM customer").fetchall()
+for r in rows:
+    st.write(r)
+
+# === Book 테이블 내용 화면에 보여주기 ===
+st.subheader("📚 Book 테이블 내용")
+rows = con.execute("SELECT * FROM book").fetchall()
+for r in rows:
+    st.write(r)
+
     
