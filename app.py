@@ -1,3 +1,4 @@
+conn = duckdb.connect("madang.db")
 import streamlit as st
 import duckdb
 import pandas as pd
